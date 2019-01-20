@@ -44,6 +44,9 @@ class ViewController: UIViewController
             }else{
                 button.setTitle("" , for: UIControl.State.normal)
                 button.backgroundColor = card.isMatched ? #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 0) : #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+                if card.isMatched == true {
+                    button.isEnabled = false
+                }
             }
         }
     }
