@@ -18,11 +18,11 @@ class ViewController: UIViewController
         }
     }
     
+    //var matchCount = 0
+    
     @IBOutlet weak var flipCountLabel: UILabel!
     
     @IBOutlet var cardButtons: [UIButton]!
-    
-   
     
     @IBAction func touchCard(_ sender: UIButton) {
         flipCount += 1
@@ -44,6 +44,13 @@ class ViewController: UIViewController
             }else{
                 button.setTitle("" , for: UIControl.State.normal)
                 button.backgroundColor = card.isMatched ? #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 0) : #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+                if card.isMatched == true {
+                    button.isEnabled = false
+                    //matchCount += 1
+                }
+               /* if matchCount == cardButtons.count{
+                    
+                }*/
             }
         }
     }
