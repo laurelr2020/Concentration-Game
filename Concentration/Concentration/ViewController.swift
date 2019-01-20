@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1 / 2 ))
+    lazy var game = Concentration(numberOfPairsOfCards: ((cardButtons.count + 1) / 2 ))
     
     var flipCount = 0{
         didSet{
@@ -43,19 +43,19 @@ class ViewController: UIViewController
                 button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             }else{
                 button.setTitle("" , for: UIControl.State.normal)
-                button.backgroundColor = card.isMatched ? #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 0) : #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+                button.backgroundColor = card.isMatched ? #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 0) : #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
             }
         }
     }
     
-    var emojiChoices = ["😍","🥰","😘","🤗","💋","🌹","💐","🍫","❤️","🧡","💛","💚","💙","💜","❣️","💕","💘","💖","💗","💓","💞","💝"]
+    var emojiChoices = ["😍","🥰","😘","🤗","💋","🌹","❤️","💘","💖","💝"]
     
     var emoji = [Int:String]()
     
     func emoji(for card: Card) -> String{
         if emoji[card.identifier]  == nil{
             if emojiChoices.count > 0 {
-            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
+            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count-1)))
             emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
             }
         }

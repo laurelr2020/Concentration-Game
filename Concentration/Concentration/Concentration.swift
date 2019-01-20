@@ -41,6 +41,12 @@ class Concentration
             cards += [card, card]
         }
         //TODO: Shuffle the Cards
-        cards.shuffle()
+        //cards.shuffle()
+        var last = cards.count - 1
+        while (last > 0) {
+            let rand = Int( arc4random_uniform( UInt32( last ) ) )
+            cards.swapAt(last, rand)
+            last -= 1
+        }
     }
 }
