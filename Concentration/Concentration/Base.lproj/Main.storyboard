@@ -242,22 +242,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPe-hz-zps">
-                                <rect key="frame" x="87" y="448" width="240" height="60"/>
+                                <rect key="frame" x="87" y="490" width="240" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Play Again?">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-oz-4N3">
-                                <rect key="frame" x="148" y="556" width="120" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Quit">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="LQn-TR-uZC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9989047647" green="0.63297230010000005" blue="0.83394211529999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -330,4 +324,7 @@
             <point key="canvasLocation" x="-1098.5507246376812" y="79.076086956521749"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LQn-TR-uZC"/>
+    </inferredMetricsTieBreakers>
 </document>
